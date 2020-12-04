@@ -1,15 +1,6 @@
 # Fibonacci series:
 # the sum of two elements defines the next
 
-"""
-a, b = 0, 1
-while a < 1000:
-    print(a, end=',')
-    c = a
-    a = b
-    b = c+b
-"""
-
 # return list with fibonacci numbers up to n
 def fibo(n):
     result = []
@@ -19,5 +10,6 @@ def fibo(n):
         a, b = b, a+b
     return result
 
+# first class functions
 f10 = fibo(1000)
 print(f10)

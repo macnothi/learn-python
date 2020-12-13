@@ -35,3 +35,28 @@ print(s[s.find('['):s.find(']')]) # [wichtiger Text
 
 s = s[s.find('[')+1:s.find(']')] 
 print(s) # wichtiger Text
+
+#W4: Dateinamen inklusive Verzeichnis zerlegen
+s= str(__file__) # Dateinmane und Pfad dieses Skripts
+print(s)
+fileNameStart = s.rfind('/') # letztes "/" von hinten suchen
+folderName = s[:fileNameStart+1] # Verzeichnis, inklusive "/"
+fileName = s[fileNameStart+1:] # Dateiname, ohne "/"
+print(f'Datei: \'{fileName}\', Verzeichnis: \'{folderName}\'')
+
+#W5: Leerzeichen am Anfang und Ende abschneiden
+s = '   Ein Text mit Leerzeichen am Anfang und Ende?   '
+print('\"' + s + '\"')
+s = s.replace('mit','ohne') # text anpassen
+s = s.replace('?','!') # text anpassen
+print('\"' + s.strip() + '\"')
+
+#W6: Maximal 3 fünfstellige Zahlen rechtsbündig ausgeben
+a = 34598
+b = 5987
+c = 120
+print(f'{a:>5d}\n{b:>5d}\n{c:>5d}\n')
+
+#W7: Hello, World! umgekehrt ausgeben
+s = 'Hello, World!'
+print(s, s[::-1])

@@ -11,3 +11,9 @@ print('Hallo, {0}!'.format(name)) # bessere Lösung finde ich
 locale.setlocale(locale.LC_ALL, '')
 print(time.strftime('Heute ist %A, der %d. %B %Y.'))
 print(time.strftime('Es ist jetzt %H:%M'), 'Uhr.')
+
+n = 22.7
+msg = 'Die Temperatur beträgt ' + str(n) + ' Grad Celsius'
+msg = 'Die Temperatur beträgt {0}°C'.format(n)
+
+print(msg)

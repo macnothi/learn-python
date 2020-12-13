@@ -5,4 +5,6 @@ def fact(n):
     else:
         return n * fact(n-1)
 
-print(fact(400))
+# wenn als script aufgerufen
+if __name__ == '__main__':
+    print(fact(40))

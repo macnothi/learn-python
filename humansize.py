@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # converts file sizes in bytes into human readable values 
 SUFFIXES = {1000: ['KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'],
             1024: ['KiB', 'MiB', 'GiB', 'TiB', 'PiB', 'EiB', 'ZiB', 'YiB']}

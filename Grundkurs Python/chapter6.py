@@ -23,7 +23,8 @@ print(endTime.time())
 
 #W3: Wieviele Sekunden sind seit Mitternacht vergangen?
 from datetime import time, datetime, timedelta
-nowTime = datetime.now()
-secondsSinceMidnight = nowTime.hour * 60 * 60 + nowTime.minute * 60 + nowTime.second
-print(nowTime.time())
+locale.setlocale(locale.LC_ALL,'de_DE.UTF-8')
+now = datetime.now()
+secondsSinceMidnight = 60 * (now.hour * 60 + now.minute) + now.second 
+print(now.time())
 print(secondsSinceMidnight)

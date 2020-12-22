@@ -11,6 +11,8 @@ def fibo(n):
         a, b = b, a+b
     return result
 
-# first class functions
-f10 = fibo(1000)
-print(f10)
+# wenn als script aufgerufen
+if __name__ == '__main__':
+    # first class functions
+    f10 = fibo(1000)
+    print(f10)

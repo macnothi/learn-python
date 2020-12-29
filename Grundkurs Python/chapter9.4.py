@@ -15,18 +15,18 @@ def ggT(a:int ,b:int) -> int:
     else:
         return -1
 
-# Division mit Rest
+# Division mit Rest, rekursiver Aufruf
 def ggT2(a,b):
     if isinstance(a, int) and isinstance(b, int):
         c=a%b
-        while c != 0:
-            a,b = b,c
-            c=a%b
-        return b
+        if c == 0:
+            return b
+        else:
+            return ggT2(b,c)
     else:
         return -1
 
-Teiler = [[-65, 143.2], [2,4], [13,44], [-20,8]]
+Teiler = [[-65, 143], [4,2], [13,44], [-20,8]]
 
 for x in Teiler:
     print(x, ggT(x[0],x[1]), end=' ')

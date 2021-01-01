@@ -39,14 +39,45 @@ class Rectangle():
     def getPerimeter(self):
         return 2 * (self.__h + self.__w)
 
-r1 = Rectangle(12.0, 15)
+    # Overload ==
+    def __eq__(self, other):
+        return (self.h, self.w) == (other.h, other.w)
+
+    # Overload <
+    def __lt__(self, other):
+        return self.getArea() < other.getArea()
+
+    # Overload <=
+    def __le__(self, other):
+        return self.getArea() <= other.getArea()
+
+    # Print Ausgabe
+    def __str__(self):
+        return 'Rechteck (h=%.2f, w=%.2f)' % (self.h, self.w)
+
+    # Debug Ausgabe
+    def __repr__(self):
+        return 'Rectangle h=%f, w=%f' % (self.h, self.w)
+
+    # hash Wert
+    def __hash__(self):
+        return hash((self.h, self.w)) # Tupel der Instanzvariablen
+
+r1 = Rectangle(12, 13.546)
 r2 = Rectangle(7.5, 11.2)
+r3 = Rectangle(10,15)
 
-r2.h = 11.2
+r2.h = 11.3
 
-for r in [r1, r2]:
+for r in [r1, r2, r3]:
     print('++++++++++++++++++++++')
+    print(r)
     print('Höhe   :', r.h)
     print('Breite :', r.w)
-    print('Fläche :', r.getArea())
-    print('Umfang :', r.getPerimeter())
+    print('Fläche : {0:.2f}'.format(r.getArea()))
+    print('Umfang : {0:.2f}'.format(r.getPerimeter()))
+
+# Ausgabe sortiert ...
+print(sorted([r1, r2, r3])) # nutzt < operator
+print(sorted([r1, r2, r3], key=lambda x: x.w)) # nach w sortiert
+print(sorted([r1, r2, r3], key=lambda x: x.h)) # nach h sortiert

@@ -2,8 +2,8 @@
 
 class Rectangle():
     # Konstruktor mit Höhe, Breite
-    def __init__(self, heigth, width):
-        self.h = heigth
+    def __init__(self, height, width):
+        self.h = height
         self.w = width
 
     # Flächeninhalt

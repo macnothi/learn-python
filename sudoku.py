@@ -61,9 +61,9 @@ def solveSudoku(m: list) -> bool:
     for num in range(1,10):
         if checkField(m,pos,num):
             m[pos[0]][pos[1]] = num # mögliche Lösung einsetzen
-            if solveSudoku(m): # und testen
+            if solveSudoku(m): # und rekursiv testen
                 return True # gelöst...
-            m[pos[0]][pos[1]] = 0 # Änderungen rückgängig
+            m[pos[0]][pos[1]] = 0 # Änderung rückgängig
     return False # noch keine gültige Lösung
  
 m = strToMatrix(s)

@@ -1,4 +1,6 @@
 #!/usr/env/bin python3
+# KUDOS
+# https://www.geeksforgeeks.org/sudoku-backtracking-7/
 
 # Sudoku in string format, '0' für leeres Feld
 s = '700600984582901000400300021065219000000830156041000390004096803000052709179000000'

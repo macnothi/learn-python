@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-import pandas as pd             # 
 import locale                   # Lokalisierung
 from datetime import datetime, timedelta   # Zeiten
 

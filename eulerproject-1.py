@@ -6,11 +6,14 @@
 
 #!/usr/bin/env python3
 
-def sum35(n):
+def sum35(r):
+    if r < 1:
+        raise ValueError("range > 0 required")
+
     sum = 0
-    for r in range(1,n): # range is 1 .. 999 by definition
-        if r % 3 == 0 or r % 5 == 0:  # check if r divides by 3 or 5 without rest
-            sum += r    # add up
+    for n in range(1,r): # range is 1 .. 999 by definition
+        if n % 3 == 0 or n % 5 == 0:  # check if n divides by 3 or 5 without rest
+            sum += n    # add up
     return sum
 
 

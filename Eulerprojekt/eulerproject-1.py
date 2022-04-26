@@ -16,7 +16,7 @@ def sum35(r):
             sum += n    # add up
     return sum
 
-
+    
 # return result if called as script
 if __name__ == '__main__':
     print(sum35(1000))

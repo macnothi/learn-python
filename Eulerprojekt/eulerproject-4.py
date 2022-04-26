@@ -34,7 +34,7 @@ def getLargestPalindrome():
         while b > 99: # 3-digit number means >=100
             c=a*b     # calculate product
             if checkIfPalindrome(c):   
-                return c,a,b # return palindrome, a and b
+                return c,a,b # return largest palindrome, a and b
             b-=1      # next b
         a-=1     # next a
     return -1,-1,-1         # we did not find a palindrome!

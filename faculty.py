@@ -7,4 +7,4 @@ def fact(n):
 
 # wenn als script aufgerufen
 if __name__ == '__main__':
-    print(fact(20))
+    print(fact(11))

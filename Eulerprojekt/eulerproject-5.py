@@ -6,7 +6,7 @@
 What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
 '''
 
-# berechnet Primfaktorzerlegung einer natürlichen Zahl
+# berechnet Primfaktorzerlegung einer natürlichen Zahl (ohne 1)
 def primeFactors(n):        
     factors = []                # Ergebnisliste
     t = 2                       # starte mit 2 als Teiler
@@ -49,10 +49,13 @@ def getMaxPrimeFactorPotencies(primeFactorDict):
 def getKgV(list):
     kgV=1
     pontencies = getMaxPrimeFactorPotencies(getFactors(list))
+    print(list)
+    print(pontencies)
     for k,v in pontencies.items():
         kgV=kgV*k**v
     return kgV
 
 # wenn als script aufgerufen
 if __name__ == '__main__':
-    print(getKgV([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]))
+    #print(getKgV([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]))
+    print(getKgV([84,92,111]))
